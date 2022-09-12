@@ -20,12 +20,20 @@ namespace MEOCampaign.Infra.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
             modelBuilder.Entity<Citizen>()
             .HasOne<CitizenAddress>(s => s.CitizenAddress)
             .WithOne(ad => ad.Citizen)
             .HasForeignKey<CitizenAddress>(ad => ad.CitizenAddressId);
+
+            foreach (var property in modelBuilder.Model.GetEntityTypes()
+                .SelectMany(e => e.GetProperties()
+                    .Where(p => p.ClrType == typeof(string))))
+                property.SetColumnType("varchar(100)");
+
+            //Records each "Mapping" at once
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+
+            base.OnModelCreating(modelBuilder);
 
         }
     }

@@ -44,21 +44,21 @@ namespace MEOCampaign.Infra.Data.Services
                         Name = "Citizen 01",
                         DateOfBirth = DateTime.Now,
                         Email = "citizen1@gmail.com",
-                        PhoneNumber = "+351 918 554 887"
+                        PhoneNumber = "918 554 887"
                     },
                     new Citizen
                     {
                         Name = "Citizen 02",
                         DateOfBirth = DateTime.Now,
                         Email = "citizen2@gmail.com",
-                        PhoneNumber = "+351 918 554 887"
+                        PhoneNumber = "918 554 887"
                     },
                     new Citizen
                     {
                         Name = "Citizen 03",
                         DateOfBirth = DateTime.Now,
                         Email = "citizen3@gmail.com",
-                        PhoneNumber = "+351 918 554 887"
+                        PhoneNumber = "918 554 887"
                     });
 
                 context.SaveChanges();
