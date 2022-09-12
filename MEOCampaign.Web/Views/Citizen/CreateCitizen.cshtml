@@ -1,0 +1,66 @@
+﻿@model MEOCampaign.Web.ViewModels.CitizenBaseViewModel
+
+@{
+    ViewData["Title"] = "Form Citizen";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="CitizenViewModel.Name" class="control-label"></label>
+                <input asp-for="CitizenViewModel.Name" class="form-control" />
+                <span asp-validation-for="CitizenViewModel.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CitizenViewModel.DateOfBirth" class="control-label"></label>
+                <input asp-for="CitizenViewModel.DateOfBirth" class="form-control" />
+                <span asp-validation-for="CitizenViewModel.DateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CitizenViewModel.PhoneNumber" class="control-label"></label>
+                <input asp-for="CitizenViewModel.PhoneNumber" class="form-control" />
+                <span asp-validation-for="CitizenViewModel.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CitizenViewModel.Email" class="control-label"></label>
+                <input asp-for="CitizenViewModel.Email" class="form-control" />
+                <span asp-validation-for="CitizenViewModel.Email" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="CitizenAddressViewModel.Street" class="control-label"></label>
+                <input asp-for="CitizenAddressViewModel.Street" class="form-control" />
+                <span asp-validation-for="CitizenAddressViewModel.Street" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CitizenAddressViewModel.City" class="control-label"></label>
+                <input asp-for="CitizenAddressViewModel.City" class="form-control" />
+                <span asp-validation-for="CitizenAddressViewModel.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CitizenAddressViewModel.PostalCode" class="control-label"></label>
+                <input asp-for="CitizenAddressViewModel.PostalCode" class="form-control" />
+                <span asp-validation-for="CitizenAddressViewModel.PostalCode" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="GetAllCitizens">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
