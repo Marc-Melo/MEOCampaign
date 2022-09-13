@@ -70,7 +70,10 @@ namespace MEOCampaign.Web.Controllers
         {
             var citizens = _citizenService.GetAll();
 
-            return View(_mapper.Map<IEnumerable<CitizenReadViewModel>>(citizens));
+            if(citizens != null && citizens.Count() > 0)
+                return View(_mapper.Map<IEnumerable<CitizenReadViewModel>>(citizens));
+
+            return NotFound();
         }
 
         /// <summary>

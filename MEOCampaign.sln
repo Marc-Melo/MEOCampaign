@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MEOCampaign.Core", "MEOCamp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MEOCampaign.Infra", "MAOCampaign.Infra\MEOCampaign.Infra.csproj", "{5432C60F-53B7-4E2A-9531-6EDE19A26D6F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5EC76F77-E516-472D-AEBB-ED7F7E81B5F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEOCampaign.Tests", "MEOCampaign.Tests\MEOCampaign.Tests.csproj", "{7458DB4D-342D-454C-8236-7080F1E4E044}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{5432C60F-53B7-4E2A-9531-6EDE19A26D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5432C60F-53B7-4E2A-9531-6EDE19A26D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5432C60F-53B7-4E2A-9531-6EDE19A26D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7458DB4D-342D-454C-8236-7080F1E4E044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7458DB4D-342D-454C-8236-7080F1E4E044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7458DB4D-342D-454C-8236-7080F1E4E044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7458DB4D-342D-454C-8236-7080F1E4E044}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +54,7 @@ Global
 		{9C97EF68-3384-4C12-81C4-55B1BDA54F43} = {0C30A95A-C290-45A8-B004-546E4B3AF9CB}
 		{36C68668-FF37-41F4-BD2E-71A3A69BECFB} = {CCA1426C-36AD-4E8F-9ADD-49C5534C7545}
 		{5432C60F-53B7-4E2A-9531-6EDE19A26D6F} = {A9FBD9E2-2FDD-495E-93E4-F3D65679CF21}
+		{7458DB4D-342D-454C-8236-7080F1E4E044} = {5EC76F77-E516-472D-AEBB-ED7F7E81B5F5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {742536ED-575F-402A-9589-B59A8D2C2248}
